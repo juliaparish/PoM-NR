@@ -1,0 +1,33 @@
+---
+title: "usfws_timeline"
+author: "Julia Parish"
+date: "2023-03-12"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(tidyverse)
+library(here)
+library(readxl)
+library(ggalt)
+library(lubridate)
+library(scales)
+library(paletteer)
+
+```
+
+Inspiration: https://rpubs.com/ageek/ggplot-adv-part2
+
+```{r}
+time <- read_excel(here("data/20230317_USFWS-INRMP_Communications.xlsx"), sheet = "23-INRMP") %>% 
+  mutate(start_num = as.numeric(Date)) 
+
+```
+
+
+```{r}
+
+```
+
